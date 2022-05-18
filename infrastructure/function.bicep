@@ -46,6 +46,7 @@ resource function_app 'Microsoft.Web/sites@2020-12-01' = {
   properties: {
     serverFarmId: appservice_plan.id
     siteConfig: {
+      linuxFxVersion: 'Python|3.9'
       appSettings: [
         {
           name: 'AzureWebJobsStorage'
